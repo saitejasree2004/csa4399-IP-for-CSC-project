@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Hunting</title>
+    <link rel="stylesheet" href="main.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Main layout */
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://media.architecturaldigest.com/photos/6559735fb796d428bef00d25/16:9/w_2560%2Cc_limit/GettyImages-1731443210.jpg'); /* Example background image URL */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 48px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .side-panel {
+            width: 20%;
+            background-color: rgba(245, 245, 245, 0.8);
+            padding: 20px;
+            height: 100vh;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .side-panel nav a {
+            display: block;
+            padding: 10px 0;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .side-panel nav a:hover {
+            background-color: #03a9f4;
+            color: white;
+            border-radius: 4px;
+        }
+
+        .side-panel nav a.privacy-policy {
+            cursor: pointer;
+        }
+
+        .privacy-policy-content {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        .privacy-policy-content h2 {
+            margin-top: 0;
+        }
+
+        .privacy-policy-content .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .main-content {
+            width: 60%;
+            padding: 20px;
+        }
+        
+        .notification {
+            width: 20%;
+            padding: 20px;
+            background-color: rgba(249, 249, 249, 0.8);
+            border-left: 1px solid #ccc;
+        }
+        
+        /* Featured listings */
+        .featured-listings {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        
+        .listing {
+            flex: 0 0 calc(50% - 20px); /* Two images per row */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .listing img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        /* Notifications */
+        .notification ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .notification ul li {
+            background-color: #e1f5fe;
+            border-left: 4px solid #03a9f4;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        
+        /* Customer reviews */
+        .customer-reviews {
+            margin-top: 20px;
+            background-color: rgba(241, 241, 241, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .customer-reviews .review {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .review img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .review-text {
+            flex: 1;
+        }
+        
+        .stars i {
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <!-- Side panel for navigation -->
+    <aside class="side-panel">
+        <nav>
+            <a href="main.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="myacc.html">My Account</a>
+            <a href="feed.html">Feedback</a>
+            <a href="wish.html">Wishlist</a>
+            <a href="main.html">Property Type</a>
+            <a href="tour.html">Appartment Tour</a>
+            <a href="map.html">Location</a>
+            <a href="confirmation.html">Confirmation Page</a>
+            <a href="viewapp.html">Appartment Details</a>
+            <a href="con.html">Contact Us</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </nav>
+    </aside>
+    
+    <!-- Main content area -->
+    <main class="main-content">
+        <section class="featured">
+            <h2>Featured Listings</h2>
+            <div class="featured-listings">
+                <div class="listing">
+                    <img src="app1.jpg" alt="Listing 1">
+                    <h3>Modern Apartment in Downtown</h3>
+                    <a href="appartmentdetail 1.html">View Details</a>
+                </div>
+                <div class="listing">
+                    <img src="app2.jpg" alt="Listing 2">
+                    <h3>Cozy Cottage in the Suburbs</h3>
+                    <a href="appartmentdetail 1.html">View Details</a>
+                </div>
+                <div class="listing">
+                    <img src="app3.jpg" alt="Listing 3">
+                    <h3>Spacious Family Home</h3>
+                    <a href="appartmentdetail 1.html">View Details</a>
+                </div>
+                <div class="listing">
+                    <img src="lux.jpg" alt="Listing 5">
+                    <h3>Charming House with Garden</h3>
+                    <a href="appartmentdetail 1.html">View Details</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Customer reviews section -->
+        <section class="customer-reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="John Doe" width="200">
+                <div class="review-text">
+                    <p>"Excellent service! Found my dream house within days!" - John Doe</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="review">
+                <img src="https://thumbs.dreamstime.com/b/portrait-handsome-smiling-young-man-folded-arms-smiling-joyful-cheerful-men-crossed-hands-isolated-studio-shot-172869765.jpg" alt="Jane Smith" width="200">
+                <div class="review-text">
+                    <p>"Very user-friendly website, made the process of renting super easy." - Jane Smith</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i> <!-- Empty star -->
+                    </div>
+                </div>
+            </div>
+            <div class="review">
+                <img src="https://img.freepik.com/free-photo/handsome-bearded-guy-posing-against-white-wall_273609-20597.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1725926400&semt=ais_hybrid" alt="Alice Johnson" width="200">
+                <div class="review-text">
+                    <p>"Highly recommend! Great listings and amazing support." - Alice Johnson</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Notification section -->
+    <aside class="notification">
+        <h2>Notifications</h2>
+        <ul>
+            <li>New apartment available! Low prices, grab it soon!</li>
+            <li>Special offer on a modern downtown apartment. Don't miss out!</li>
+            <li>Hurry! Spacious family home just listed at a discounted price.</li>
+            <li>New cozy cottage in the suburbs at affordable rates!</li>
+            <li>Charming house with garden, perfect for families. Buy now!</li>
+            <li>Limited time offer: Apartment with sea view available now.</li>
+            <li>Newly renovated downtown flat up for grabs. Check it out!</li>
+            <li>Exclusive deal on a modern apartment with a rooftop terrace.</li>
+            <li>Hot deal! Spacious apartment with a home office listed for sale.</li>
+            <li>Grab this opportunity: Suburban cottage with a large backyard!</li>
+        </ul>
+    </aside>
+
+    <!-- Privacy Policy Modal -->
+    <div class="privacy-policy-content">
+        <span class="close">&times;</span>
+        <h2>Privacy Policy</h2>
+        <p>Welcome to our Privacy Policy page. Here you will find details about how we handle your data.</p>
+        <p>[Your terms and conditions and privacy policy content here]</p>
+    </div>
+
+    <script>
+        // JavaScript to handle the display of the privacy policy
+        document.addEventListener('DOMContentLoaded', () => {
+            const privacyPolicyLink = document.querySelector('.privacy-policy');
+            const privacyPolicyContent = document.querySelector('.privacy-policy-content');
+            const closeBtn = document.querySelector('.privacy-policy-content .close');
+
+            privacyPolicyLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                privacyPolicyContent.style.display = 'block';
+            });
+
+            closeBtn.addEventListener('click', () => {
+                privacyPolicyContent.style.display = 'none';
+            });
+
+            // Close the modal if the user clicks outside of it
+            window.addEventListener('click', (e) => {
+                if (e.target === privacyPolicyContent) {
+                    privacyPolicyContent.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

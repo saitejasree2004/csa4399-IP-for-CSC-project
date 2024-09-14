@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apartment Details</title>
+    <link rel="stylesheet" href="deepikaowner.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://cms.interiorcompany.com/wp-content/uploads/2023/11/simple-and-beautiful-house-design-the-loft-aesthetic.png'); /* Background image URL */
+            background-size: cover;
+            background-position: center;
+            background-color: #f0f0f0; /* Fallback background color */
+        }
+
+        .apartment-container {
+            text-align: center;
+            max-width: 500px; /* Adjusted size */
+            padding: 15px;    /* Adjusted padding */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.8); /* Slightly opaque background for readability */
+        }
+
+        .apartment-image img,
+        .floor-plan-image img {
+            width: 100%; /* Adjust to fit the container */
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px; /* Adjusted margin */
+        }
+
+        h1, h2, p, ul {
+            margin: 5px 0; /* Adjusted margins */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 3px 0; /* Adjusted margin */
+        }
+
+        .owner-link {
+            display: inline-block;
+            padding: 8px 15px; /* Adjusted padding */
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px; /* Adjusted margin */
+        }
+
+        .owner-link:hover {
+            background-color: #45a049;
+        }
+
+        .apartment-info table {
+            width: 100%; /* Make table fit container */
+            border-collapse: collapse;
+            margin: 10px 0; /* Add some margin */
+            font-size: 14px; /* Smaller font size */
+        }
+
+        .apartment-info th, .apartment-info td {
+            border: 1px solid #ddd;
+            padding: 6px; /* Reduced padding */
+            text-align: left;
+        }
+
+        .apartment-info th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <section class="apartment-container">
+        <header>
+            <h1>Apartment Details</h1>
+        </header>
+
+        <div class="apartment-image">
+            <img src="app2.jpg" alt="Apartment">
+        </div>
+        
+        <div class="apartment-info">
+            <h2>Luxury 3-Bedroom Apartment</h2>
+            <p><strong>Location:</strong> Los Angeles, CA</p>
+            <p><strong>Price:</strong> $3,800/month</p>
+            <p><strong>Size:</strong> 1,800 sq ft</p>
+            <p><strong>Description:</strong> Modern apartment with top-notch amenities, stainless steel appliances, spacious bedrooms, and rooftop lounge.</p>
+            
+            <h3>Features</h3>
+            <ul>
+                <li>3 Bedrooms</li>
+                <li>Rooftop Access</li>
+                <li>Smart Home Tech</li>
+                <li>Swimming Pool</li>
+            </ul>
+
+            <h3>Floor Plan</h3>
+            <div class="floor-plan-image">
+                <img src="https://fpg.roomsketcher.com/image/project/3d/37/-floor-plan.jpg" alt="Floor Plan">
+            </div>
+
+            <a href="deepikaowner.html" class="owner-link">View Owner Details</a>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href=""> <!-- Link to external CSS file if needed -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        header {
+            background: url('house-background.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-container {
+            width: 90%;
+            margin: auto;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .contact-page {
+            margin: 20px auto;
+            max-width: 600px; /* Adjusted width for a smaller box */
+            padding: 15px; /* Reduced padding */
+            background: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: none; /* Removed black border */
+        }
+
+        h2 {
+            font-size: 24px; /* Reduced font size */
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            margin-bottom: 15px; /* Reduced margin */
+        }
+
+        .contact-info p {
+            font-size: 14px; /* Reduced font size */
+            margin-bottom: 8px; /* Reduced margin */
+        }
+
+        .contact-info a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            margin-top: 15px; /* Reduced margin */
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 4px; /* Reduced margin */
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px; /* Reduced margin */
+            border-radius: 4px;
+            border: 1px solid rgba(0, 0, 0, 0); /* Transparent border */
+        }
+
+        .logout-button {
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .logout-button:hover {
+            background-color: #c82333;
+        }
+
+        .back-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 15px; /* Spacing below the button */
+        }
+
+        .back-button:hover {
+            background-color: red;
+        }
+
+        .footer {
+            background-color: rgba(51, 51, 51, 0.8); /* Transparent black background */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-nav {
+            display: inline-block;
+            padding: 0;
+            list-style: none;
+        }
+
+        .footer-nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            padding: 5px 10px; /* Add padding to make links clickable */
+            background-color: rgba(0, 0, 0, 0); /* Transparent background */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        .footer-nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Slightly opaque white background on hover */
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">House Hunting</h1>
+        </div>
+    </header>
+
+    <main class="contact-page">
+        <a href="main.html" class="back-button">Back to Home</a> <!-- Back Button -->
+        <h2>Contact Us</h2>
+        
+        <div class="contact-info">
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/1234567890">+1 234-567-890</a></p>
+            <p><strong>Live Chat:</strong> Available on our <a href="#">website</a>.</p>
+            <p><strong>Phone:</strong> +1 234-567-8910</p>
+            <p><strong>Email:</strong> <a href="mailto:support@househunting.com">support@househunting.com</a></p>
+        </div>
+
+        <!-- Logout Button in Contact Page -->
+        <a href="logout.html" class="logout-button">Logout</a>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 House Hunting. All rights reserved.</p>
+            <nav class="footer-nav">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

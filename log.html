@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Reset Password</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.buildofy.com/blog/content/images/2022/06/_DSC9610-Edited_-min.jpg'); /* Background image URL */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .login-container, .reset-container, .area-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .eye-icon {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #333;
+        }
+
+        .success-message {
+            color: green;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Transparent table style */
+        .transparent-table {
+            width: 80%; /* Smaller width */
+            margin: 0 auto; /* Center the table */
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+            color: #333;
+            font-size: 14px; /* Smaller font size */
+        }
+
+        .transparent-table th, .transparent-table td {
+            border: 1px solid #ccc;
+            padding: 8px; /* Reduced padding */
+            text-align: left;
+        }
+
+        .transparent-table th {
+            background-color: rgba(0, 0, 0, 0.1); /* Light background for headers */
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Section -->
+    <div id="login-section" class="section active">
+        <div class="login-container">
+            <h1>Login</h1>
+            <form id="login-form" onsubmit="return handleLogin(event)">
+                <div class="form-group">
+                    <label for="username" class="label-bold">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="label-bold">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <input type="checkbox" id="show-password" onclick="togglePassword()"> 
+                    <label for="show-password" class="label-bold">View Password</label>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div class="reset-password">
+                <a href="#" onclick="showResetSection()">Forgot your password? Reset it here</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reset Password Section -->
+    <div id="reset-section" class="section">
+        <div class="reset-container">
+            <h1>Reset Password</h1>
+            <form id="reset-form" onsubmit="return handleReset(event)">
+                <div class="form-group">
+                    <label for="email" class="label-bold">Enter your email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="new-password" class="label-bold">Enter new password:</label>
+                    <input type="password" id="new-password" name="new-password" required>
+                </div>
+                <button type="submit">Reset Password</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Area Section (Displayed after successful login or password reset) -->
+    <div id="area-section" class="section">
+        <div class="area-container">
+            <h1>Welcome to the Area Page</h1>
+            <!-- Transparent Table Example -->
+            <table class="transparent-table">
+                <thead>
+                    <tr>
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                        <th>Column 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                        <td>Data 3</td>
+                    </tr>
+                    <tr>
+                        <td>Data 4</td>
+                        <td>Data 5</td>
+                        <td>Data 6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Toggle between password visibility
+        function togglePassword() {
+            var passwordField = document.getElementById('password');
+            var showPasswordCheckbox = document.getElementById('show-password');
+            if (showPasswordCheckbox.checked) {
+                passwordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+            }
+        }
+
+        // Handle login form submission
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent default form behavior
+
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Retrieve stored credentials from localStorage
+            var storedUsername = localStorage.getItem('username');
+            var storedPassword = localStorage.getItem('password');
+
+            if (username === "sai tejasree" && password === "sai@2004") {
+                // Redirect to the area page after successful login
+                window.location.href = 'area.html';
+            } else {
+                alert("Invalid username or password.");
+            }
+        }
+
+        // Handle reset password form submission
+        function handleReset(event) {
+            event.preventDefault(); // Prevent default form behavior
+
+            var email = document.getElementById('email').value;
+            var newPassword = document.getElementById('new-password').value;
+
+            // Simulate password reset success
+            alert("Your password has been reset successfully for " + email);
+
+            // Store new credentials
+            localStorage.setItem('username', email); // Use email as username
+            localStorage.setItem('password', newPassword);
+
+            // Redirect to the area page after reset
+            window.location.href = 'area.html';
+        }
+
+        // Show reset password section
+        function showResetSection() {
+            document.getElementById('login-section').classList.remove('active');
+            document.getElementById('reset-section').classList.add('active');
+        }
+    </script>
+</body>
+</html>

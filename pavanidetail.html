@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apartment Details</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://t3.ftcdn.net/jpg/05/83/11/62/360_F_583116253_FntO3RPY1eI0o0uGfYqDYUdUfodvKRIe.jpg'); /* Example background image URL */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .apartment-container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background for contrast */
+        }
+
+        .apartment-image img,
+        .floor-plan img {
+            width: 100%; /* Adjust to fit the container */
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1, h2, p, ul {
+            margin: 10px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        .owner-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .owner-link:hover {
+            background-color: #45a049;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <section class="apartment-container">
+        <header>
+            <h1>Apartment Details</h1>
+        </header>
+
+        <div class="apartment-image">
+            <img src="app1.jpg" alt="Apartment Image">
+        </div>
+        
+        <div class="apartment-info">
+            <h2>Modern 2-Bedroom Apartment</h2>
+
+            <table>
+                <tr>
+                    <th>Location</th>
+                    <td>New York City, NY</td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>$2,500/month</td>
+                </tr>
+                <tr>
+                    <th>Size</th>
+                    <td>1,200 sq ft</td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td>This spacious apartment offers modern amenities, a fully equipped kitchen, hardwood floors, and large windows with stunning city views.</td>
+                </tr>
+            </table>
+            
+            <h3>Features</h3>
+            <ul>
+                <li>2 Bedrooms</li>
+                <li>2 Bathrooms</li>
+                <li>Private Balcony</li>
+                <li>In-unit Laundry</li>
+                <li>24/7 Security</li>
+                <li>Fitness Center Access</li>
+            </ul>
+
+            <h3>Floor Plan</h3>
+            <div class="floor-plan">
+                <img src="https://www.roomsketcher.com/content/uploads/2021/12/Site-Plan-Software.jpg" alt="Floor Plan Image">
+            </div>
+
+            <a href="pavaniowner.html" class="owner-link">View Owner Details</a>
+            <a href="map.html" class="owner-link">Location</a>
+        </div>
+    </section>
+</body>
+</html>

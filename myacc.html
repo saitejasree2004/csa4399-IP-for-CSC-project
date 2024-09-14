@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account Details</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?cs=srgb&dl=pexels-binyaminmellish-186077.jpg&fm=jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .account-info {
+            margin-bottom: 20px;
+        }
+
+        .account-info label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .account-info input, .account-info textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .account-info textarea {
+            resize: vertical;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn-container button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .btn-container button:hover {
+            background-color: #45a049;
+        }
+
+        .success-message {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            color: #28a745;
+        }
+
+        .error-message {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>My Account</h1>
+
+    <div class="account-info">
+        <label for="name">Name</label>
+        <input type="text" id="name" value="sai tejasree">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" value="123@example.com">
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" value="123-456-7890">
+
+        <label for="address">Address</label>
+        <textarea id="address" rows="4">1234 Main St, Cityville, CA 12345</textarea>
+    </div>
+
+    <div class="btn-container">
+        <button onclick="updateAccount()">Update Details</button>
+        <button onclick="window.location.href='main.html'">Back to Home</button> <!-- Direct Back to Home -->
+    </div>
+
+    <div class="success-message" id="success-message">Account details updated successfully!</div>
+    <div class="error-message" id="error-message">Please fill out all fields before submitting.</div>
+</div>
+
+<script>
+    function updateAccount() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const address = document.getElementById('address').value;
+
+        if (name && email && phone && address) {
+            document.getElementById('success-message').style.display = 'block';
+            document.getElementById('error-message').style.display = 'none';
+        } else {
+            document.getElementById('error-message').style.display = 'block';
+            document.getElementById('success-message').style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>

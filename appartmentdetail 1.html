@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details</title>
+    <link rel="stylesheet" href="appartmentdetail1.css"> <!-- Link to external CSS file -->
+    <style>
+        /* Basic styles for layout and clarity */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            background: url('https://mrwallpaper.com/images/hd/dslr-blur-winding-road-9zj6rlqdaop607wa.jpg') no-repeat center center/cover;
+        }
+
+        header {
+            background: url('https://example.com/house-background.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header-container {
+            width: 90%;
+            margin: auto;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .property-page {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .property-image {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .property-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select, textarea, input[type="text"], input[type="email"], input[type="password"], input[type="checkbox"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .features-group, .amenities-group {
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer-nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">Maison Hawker</h1>
+        </div>
+    </header>
+
+    <main class="property-page">
+        <h2>Appartment Details</h2>
+
+        <!-- Image of the property -->
+        <div class="property-image">
+        </div>
+
+        <form action="appartmentdetails1.html" method="post" class="preference-form">
+            <div class="form-group">
+                <label for="budget">Select Budget Range:</label>
+                <select id="budget" name="budget" required>
+                    <option value="">--Select Budget Range--</option>
+                    <option value="below1000">Below $1,000</option>
+                    <option value="1000to2000">$1,000 - $2,000</option>
+                    <option value="2000to3000">$2,000 - $3,000</option>
+                    <option value="above3000">Above $3,000</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="sqfeet">Select Square Feet Range:</label>
+                <select id="sqfeet" name="sqfeet" required>
+                    <option value="">--Select Square Feet Range--</option>
+                    <option value="below500">Below 500 sq ft</option>
+                    <option value="500to1000">500 - 1,000 sq ft</option>
+                    <option value="1000to1500">1,000 - 1,500 sq ft</option>
+                    <option value="above1500">Above 1,500 sq ft</option>
+                </select>
+            </div>
+
+            <div class="features-group">
+                <label>Gated Community:</label>
+                <input type="checkbox" id="gated" name="gated">
+                <label for="gated">Yes</label>
+            </div>
+
+            <div class="form-group">
+                <label>Select Amenities:</label>
+                <div class="amenities-group">
+                    <label><input type="checkbox" name="amenities" value="gym"> Gym</label>
+                    <label><input type="checkbox" name="amenities" value="pool"> Swimming Pool</label>
+                    <label><input type="checkbox" name="amenities" value="parking"> Parking</label>
+                    <label><input type="checkbox" name="amenities" value="playground"> Playground</label>
+                    <label><input type="checkbox" name="amenities" value="clubhouse"> Clubhouse</label>
+                    <label><input type="checkbox" name="amenities" value="security"> 24/7 Security</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="features">Additional Features:</label>
+                <textarea id="features" name="features" rows="4" placeholder="Describe any additional features you want"></textarea>
+            </div>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 House Hunting. All rights reserved.</p>
+            <nav class="footer-nav">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

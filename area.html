@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Select Area</title>
+    <link rel="stylesheet" href="area-selection.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://media.architecturaldigest.com/photos/6559735fb796d428bef00d25/16:9/w_2560%2Cc_limit/GettyImages-1731443210.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        header {
+            background-color: rgba(255, 182, 193, 0.8);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        .selection-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50vh;
+            padding: 20px;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group select,
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: palevioletred;
+            color: white;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Select Your Area</h1>
+    </header>
+
+    <section class="selection-container">
+        <form id="area-form">
+            <div class="form-group">
+                <label for="state">Select State:</label>
+                <select id="state" name="state">
+                    <option value="">--Select State--</option>
+                    <option value="andhra-pradesh">Andhra Pradesh</option>
+                    <option value="arunachal-pradesh">Arunachal Pradesh</option>
+                    <option value="assam">Assam</option>
+                    <option value="bihar">Bihar</option>
+                    <option value="chhattisgarh">Chhattisgarh</option>
+                    <option value="goa">Goa</option>
+                    <option value="gujarat">Gujarat</option>
+                    <option value="haryana">Haryana</option>
+                    <option value="himachal-pradesh">Himachal Pradesh</option>
+                    <option value="jharkhand">Jharkhand</option>
+                    <option value="karnataka">Karnataka</option>
+                    <option value="kerala">Kerala</option>
+                    <option value="madhya-pradesh">Madhya Pradesh</option>
+                    <option value="maharashtra">Maharashtra</option>
+                    <option value="manipur">Manipur</option>
+                    <option value="meghalaya">Meghalaya</option>
+                    <option value="mizoram">Mizoram</option>
+                    <option value="nagaland">Nagaland</option>
+                    <option value="odisha">Odisha</option>
+                    <option value="punjab">Punjab</option>
+                    <option value="rajasthan">Rajasthan</option>
+                    <option value="sikkim">Sikkim</option>
+                    <option value="tamil-nadu">Tamil Nadu</option>
+                    <option value="telangana">Telangana</option>
+                    <option value="tripura">Tripura</option>
+                    <option value="uttar-pradesh">Uttar Pradesh</option>
+                    <option value="uttarakhand">Uttarakhand</option>
+                    <option value="west-bengal">West Bengal</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="city">Enter City:</label>
+                <input type="text" id="city" name="city" placeholder="Type your city">
+            </div>
+
+            <div class="form-group">
+                <label for="nearby">Select Nearby Areas:</label>
+                <select id="nearby" name="nearby">
+                    <option value="">--Select Nearby Area--</option>
+                    <option value="hospital">Hospital</option>
+                    <option value="school">School</option>
+                    <option value="mall">Mall</option>
+                    <option value="supermarket">Supermarket</option>
+                    <option value="bank">Bank</option>
+                    <option value="restaurant">Restaurant</option>
+                    <option value="gym">Gym</option>
+                    <option value="park">Park</option>
+                    <option value="pharmacy">Pharmacy</option>
+                    <option value="bus-stop">Bus Stop</option>
+                    <option value="train-station">Train Station</option>
+                    <option value="cinema">Cinema</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('area-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Validate inputs (for example, make sure state and city are not empty)
+            const state = document.getElementById('state').value;
+            const city = document.getElementById('city').value;
+            const nearby = document.getElementById('nearby').value;
+
+            if (state && city && nearby) {
+                // Redirect to the home page
+                window.location.href = 'main.html';
+            } else {
+                alert('Please fill in all the fields.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center fixed; 
+    background-size: cover;
+    overflow: hidden;
+}
+
+.registration-container {
+    background: rgba(255, 255, 255, 0.85); /* Slightly more transparent */
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Adds a glass effect */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.registration-container h2 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 26px; /* Slightly larger font */
+    font-weight: bold;
+    position: relative;
+}
+
+.registration-container h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.registration-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.registration-container label {
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 16px;
+}
+
+.registration-container input[type="text"],
+.registration-container input[type="email"],
+.registration-container input[type="tel"],
+.registration-container input[type="password"],
+.registration-container textarea {
+    width: 100%;
+    padding: 12px; /* More padding */
+    margin-bottom: 20px; /* Larger margin */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.registration-container input[type="text"]:focus,
+.registration-container input[type="email"]:focus,
+.registration-container input[type="tel"]:focus,
+.registration-container input[type="password"]:focus,
+.registration-container textarea:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
+    outline: none;
+}
+
+.registration-container input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    border: none;
+    border-radius: 25px; /* Rounder corners */
+    color: #ffffff;
+    font-size: 18px; /* Slightly larger font */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(106, 17, 203, 0.4); /* Add shadow for depth */
+}
+
+.registration-container input[type="submit"]:hover {
+    background: linear-gradient(135deg, #5a09a4 0%, #1f5db5 100%);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(106, 17, 203, 0.6);
+}
+
+.registration-container p {
+    margin-top: 20px;
+    color: #555;
+}
+
+.registration-container a {
+    color: #6a11cb; /* Matches button gradient */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.registration-container a:hover {
+    color: #2575fc; /* Matches button gradient */
+    text-decoration: underline;
+}
